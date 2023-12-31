@@ -3,7 +3,7 @@ import "./Header.scss";
 import { motion } from 'framer-motion';
 import { images } from '../../constants';
 
-const scaleVariants ={
+const scaleVariants = {
 
     whileInView: {
         scale: [0, 1],
@@ -64,20 +64,20 @@ const Header = () => {
 
 
 
-            <motion.div 
-            variant={scaleVariants}
-            whileInView={scaleVariants.whileInView}
-            className='app__header-circles'
+            <motion.div
+                variant={scaleVariants}
+                whileInView={scaleVariants.whileInView}
+                className='app__header-circles'
             >
-{[images.flutter, images.redux, images.sass].map((circle, index) => (
- 
- <div className='circle-cmp app__flex' key={`circle-${index}`}>
+                {[images.flutter, images.redux, images.sass].map((circle, index) => (
 
-<img src={circle} alt="circle" />
+                    <div className='circle-cmp app__flex' key={`circle-${index}`}>
 
- </div>
+                        <img src={circle} alt="circle" />
 
-) )}
+                    </div>
+
+                ))}
             </motion.div>
 
         </div>
