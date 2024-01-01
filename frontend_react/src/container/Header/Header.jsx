@@ -2,6 +2,8 @@ import React from 'react'
 import "./Header.scss";
 import { motion } from 'framer-motion';
 import { images } from '../../constants';
+import { AppWrap } from '../../warpper';
+
 
 const scaleVariants = {
 
@@ -18,7 +20,7 @@ const scaleVariants = {
 
 const Header = () => {
     return (
-        <div id='home' className='app__header app__flex'>
+        <div  className='app__header app__flex'>
             <motion.div
                 whileInView={{ x: [-100, 0], opacity: [0, 1] }}
                 transition={{ duration: 1 }}
@@ -35,8 +37,8 @@ const Header = () => {
                     </div>
 
                     <div className='tag-cmp app__flex'>
-                        <p className='p-text'> Blockchain Developer and </p>
-                        <p className='p-text'> Smart Contract Developer</p>
+                        <p className='p-text'> Blockchain Developer </p>
+                        {/* <p className='p-text'> Smart Contract Developer</p> */}
                     </div>
 
                 </div>
@@ -55,10 +57,7 @@ const Header = () => {
                     className="overlay_circle"
                     src={images.circle}
                     alt="profile_circle"
-                >
-
-                </motion.img>
-
+                />
 
             </motion.div>
 
@@ -84,4 +83,4 @@ const Header = () => {
     )
 }
 
-export default Header
+export default AppWrap(Header, 'home');
