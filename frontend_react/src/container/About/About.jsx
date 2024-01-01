@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
 import "./About.scss";
-import { images } from '../../constants';
+// import { images } from '../../constants';
 import { urlFor, client } from '../../client';
-
+import { AppWrap } from '../../warpper';
 
 // const abouts = [
 //   { title: 'Web Development', description: 'I am good web developer.', imgUrl: images.about01 },
@@ -32,6 +32,7 @@ client.fetch(query)
 
   return (
     <>
+    <div className='spacer'></div>
       <h2 className='head-text'> I know that <span> Good Dapps </span><br /> means <span> Good Business </span></h2>
 
 
@@ -60,4 +61,4 @@ client.fetch(query)
   )
 }
 
-export default About
+export default AppWrap( About, 'about');
