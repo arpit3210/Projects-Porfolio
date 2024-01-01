@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import "./About.scss";
 // import { images } from '../../constants';
 import { urlFor, client } from '../../client';
-import { AppWrap } from '../../warpper';
+import { AppWrap } from '../../wrapper';
 
 // const abouts = [
 //   { title: 'Web Development', description: 'I am good web developer.', imgUrl: images.about01 },
